@@ -6,6 +6,8 @@ public class CashRegister {
 
 	public static void main(String[] args) {
 		
+		Scanner sc = new Scanner(System.in);
+		
 		int countTwentyDollarbills = 0;
 		int countTenDollarbills = 0;
 		int countfiveDollarbills = 0;
@@ -19,8 +21,7 @@ public class CashRegister {
 		int changeBills;
 		int count = 0;
 		int price1 = 0;
-
-		    Scanner sc = new Scanner(System.in);
+		
 			System.out.println("Enter the price of the item ");
 			double price = (sc.nextDouble() * 100);
 
