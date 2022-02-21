@@ -6,15 +6,15 @@ public class CashRegister {
 
 	public static void main(String[] args) {
 
-		    Scanner sc = new Scanner(System.in);
+		    Scanner kb = new Scanner(System.in);
 		    
-		    int changeTotal;
+		    double changeTotal;
 		    int changeBills;
 		    int count = 0;
-		    int countTwentyDollarbills = 0;
-		    int countTenDollarbills = 0;
-		    int countFiveDollarbills = 0;
-		    int countOneDollarbills = 0;
+		    double countTwentyDollarbills = 0;
+		    double countTenDollarbills = 0;
+		    double countFiveDollarbills = 0;
+		    double countOneDollarbills = 0;
 		    
 		    int countQuarters = 0;
 		    int countDimes = 0;
@@ -24,10 +24,10 @@ public class CashRegister {
 		  
 		    
 			System.out.println("Enter the price of the item ");
-			double price = (sc.nextDouble() * 100);
+			double price = (kb.nextDouble() * 100);
 
 			System.out.println("Please enter amount tendered ");
-			double amountTendered = (sc.nextDouble() *100);
+			double amountTendered = (kb.nextDouble() *100);
 
 			double sale = 0;
 			int totalChange = (int) (amountTendered - sale);
@@ -72,19 +72,19 @@ public class CashRegister {
 			System.out.println("Change due" + count + "Quarter");
 	}
 		if (totalChange % 10 >=0) {
-			countQuarters = (int) (totalChange / 10);
-			totalChange = totalChange - (countQuarters * 10);
+			countDimes = (int) (totalChange / 10);
+			totalChange = totalChange - (countDimes * 10);
 			System.out.println("Change due" + count + "Dime");
 	}
 		if (totalChange % 5 >=0) {
-			countQuarters = (int) (totalChange / 5);
-			totalChange = totalChange - (countQuarters * 5);
+			countNickles = (int) (totalChange / 5);
+			totalChange = totalChange - (countNickles * 5);
 			System.out.println("Change due" + count + "Nickles");
 	}
 			
 		if (totalChange % 1 >=0) {
-		   countQuarters = (int) (totalChange / 1);
-		   totalChange = totalChange - (countQuarters * 1);
+		   countPennies = (int) (totalChange / 1);
+		   totalChange = totalChange - (countPennies * 1);
 		   System.out.println("Change due" + count + "Pennies");
 	}
 				 
