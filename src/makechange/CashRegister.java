@@ -8,18 +8,19 @@ public class CashRegister {
 
 		    Scanner sc = new Scanner(System.in);
 		    
-		    double changeTotal;
+		    int changeTotal;
 		    int changeBills;
 		    int count = 0;
-		    double countTwentybills = 0;
-		    double countTenbills = 0;
-		    double countFivebills = 0;
-		    double countOnebills = 0;
+		    int countTwentyDollarbills = 0;
+		    int countTenDollarbills = 0;
+		    int countFiveDollarbills = 0;
+		    int countOneDollarbills = 0;
 		    
-		    double countQuarters = 0;
-		    double countDimes = 0;
-		    double countNickles = 0;
-		    double countPennies = 0;
+		    int countQuarters = 0;
+		    int countDimes = 0;
+		    int countNickles = 0;
+		    int countPennies = 0;
+		  
 		  
 		    
 			System.out.println("Enter the price of the item ");
@@ -29,10 +30,10 @@ public class CashRegister {
 			double amountTendered = (sc.nextDouble() *100);
 
 			double sale = 0;
-			double totalChange = (amountTendered - sale);
+			int totalChange = (int) (amountTendered - sale);
 			System.out.println("Change total is $ " + totalChange);
 			
-			int totalChange1 = (int) (amountTendered - price);
+		    int totalChange1 = (int) (amountTendered - price);
 
 			
 			if(totalChange < 0) {
@@ -49,19 +50,19 @@ public class CashRegister {
 				 
 		
 		if (totalChange % (20 * 100) >= 0) {
-			double countTwentyDollarbills = (int)(totalChange / (20 * 100));
+		    countTwentyDollarbills = (int)(totalChange / (20 * 100));
 			System.out.println("Change due" + count + "20 Dollar Bills");
 		}
 		if (totalChange % (10 * 100) >= 0) {
-			double countTwentyDollarbills = (int)(totalChange / (10 * 100));
+			countTenDollarbills = (int)(totalChange / (10 * 100));
 			System.out.println("Change due" + count + "10 Dollar Bills");
 	}
 		if (totalChange % (5 * 100) >= 0) {
-			double countTwentyDollarbills = (int)(totalChange / (5 * 100));
+		    countFiveDollarbills = (int)(totalChange / (5 * 100));
 			System.out.println("Change due" + count + "5 Dollar Bills");
 	}
 		if (totalChange % (1 * 100) >= 0) {
-			double countTwentyDollarbills = (int)(totalChange / (1 * 100));
+			countOneDollarbills = (int)(totalChange / (1 * 100));
 			System.out.println("Change due" + count + "1 Dollar Bills");
 	}
 	
