@@ -7,7 +7,6 @@ public class CashRegister {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		
 		int countTwentyDollarbills = 0;
 		int countTenDollarbills = 0;
 		int countfiveDollarbills = 0;
@@ -22,11 +21,12 @@ public class CashRegister {
 		int count = 0;
 		int price1 = 0;
 		
+		    Scanner sc1 = new Scanner(System.in);
 			System.out.println("Enter the price of the item ");
-			double price = (sc.nextDouble() * 100);
+			double price = (sc1.nextDouble() * 100);
 
 			System.out.println("Please enter amount tendered ");
-			double amountTendered = (sc.nextDouble() *100);
+			double amountTendered = (sc1.nextDouble() *100);
 
 			double sale = 0;
 			double totalChange = (amountTendered - sale);
